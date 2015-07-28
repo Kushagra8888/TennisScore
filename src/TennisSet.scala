@@ -7,7 +7,7 @@ class TennisSet() {
   var player2score: Int = 0
   var isMatchOngoing: Boolean = false
   //var isSetFinished: Boolean = false
-  var game: TennisGame
+  var game : TennisGame
 
   def update( scoredBy: Char) = {
     if (!isMatchOngoing) {
@@ -39,6 +39,18 @@ class TennisSet() {
     else{
       return false;
     }
+  }
+
+  def printScore(): String = {
+    return "Player 1: " + player1score + "\n" + "Player 2: " + player2score
+  }
+
+  def getPlayer1Score(): Int = {
+    return player1score
+  }
+
+  def getPlayer2Score(): Int = {
+    return player2score
   }
 
 }
