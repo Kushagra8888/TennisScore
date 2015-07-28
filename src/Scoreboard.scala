@@ -1,5 +1,4 @@
 package tennis
-
 /**
  * @author test
  */
@@ -9,6 +8,10 @@ object Scoreboard {
     var input : String = readLine("Enter input> ")
     input = input.map(_.toUpper)  
     println(input)
-    for (c <- input) println(c)
+   parseInput(input); 
   }
+    def parseInput(input : String) : Unit = {
+       val tennisGame: TennisGame = new TennisGame()
+    for (c <- input) tennisGame.update(c);
+    }
 }
