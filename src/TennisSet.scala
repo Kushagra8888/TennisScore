@@ -6,6 +6,7 @@ class TennisSet() {
   var player1score: Int = 0
   var player2score: Int = 0
   var isMatchOngoing: Boolean = false
+  var winner: Char
   //var isSetFinished: Boolean = false
   var game : TennisGame
 
@@ -26,6 +27,17 @@ class TennisSet() {
         else {
           player2score += 1
         }
+      }
+    }
+  }
+
+  def getWinner(): Char = {
+    if (isSetOver()) {
+      if (player1score > player2score) {
+        return 'D'
+      }
+      else {
+        return 'F'
       }
     }
   }
