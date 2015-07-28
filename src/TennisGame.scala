@@ -6,20 +6,15 @@ object TennisGame {
   
 	def update(pointWinner: Char) {
 		if (pointWinner == 'D') {
-			println("D")
 			p1Index += 1
 		} else {
-			println("F")
 			p2Index += 1
 		}
 			
 			
 		if (gameDone()) {
-			if (p1Index > p2Index) {
-					println("D wins the game")
-			} else {
-					println("F wins the game")
-			}
+			println(getWinner())
+			
 		} else if (p1Index == 4 && p2Index == 4) {
 			
 			p1Index = 3
@@ -45,5 +40,12 @@ object TennisGame {
 	}
 	def parseInput(input : String) : Unit = {
 		for (c <- input) update(c);
+	}
+	def getWinner() : Char = {
+		if (p1Index > p2Index) {
+			'D'
+		} else {
+			'F'
+		}
 	}
 }
