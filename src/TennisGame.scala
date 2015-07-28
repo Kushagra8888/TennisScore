@@ -1,5 +1,5 @@
 
-object TennisGame {
+class TennisGame {
 	val scores = List("0", "15", "30", "40", "A", "W")
 	var p1Index = 0
 	var p2Index = 0
